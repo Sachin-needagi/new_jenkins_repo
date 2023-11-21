@@ -4,9 +4,7 @@ pipeline{
     stages{
       
           stage('BUILD'){
-		  agent {label 'master'}
-            
-        steps{
+		  steps{
             
              sh ''' 
                  ls
@@ -16,7 +14,7 @@ pipeline{
 
             parallel {		
         
-        stage('TEST-WINDOW'){
+        stage ('TEST-WINDOW'){
             
         steps{
             
@@ -27,12 +25,11 @@ pipeline{
          
            }
 		     
-           stage('TEST-LINUX'){
+           stage ('TEST-LINUX'){
 		steps{
-            
-              sh ''' 
-                 ls
-                 sleep 10 '''
+                 sh ''' 
+                   ls
+                   sleep 10 '''
                  }
          
                }
