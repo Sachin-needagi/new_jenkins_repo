@@ -4,7 +4,7 @@ pipeline{
     stages{
       
           stage('BUILD'){
-		  agent{label 'master']
+		 agent {label 'master'}
             
         steps{
             
@@ -15,7 +15,7 @@ pipeline{
         }   
         
         stage('TEST'){
-		agenta[label 'slave1']
+		agent {label 'slave1'}
             
         steps{
             
