@@ -14,7 +14,7 @@ pipeline{
             }
         }
 
-            parallel{		
+            parallel {		
         
         stage('TEST-WINDOW'){
             
