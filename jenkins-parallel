@@ -14,7 +14,7 @@ pipeline{
         }
 
 stage('TEST_AT_A_TIME'){
-agent{label'slave1'}
+agent{label 'slave1'}
 parallel {		
         
         stage ('TEST-WINDOW'){
