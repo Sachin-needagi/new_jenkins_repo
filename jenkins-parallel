@@ -11,8 +11,7 @@ pipeline{
                  sleep 10 '''
             }
         }
-
-            parallel {		
+parallel {		
         
         stage ('TEST-WINDOW'){
             
