@@ -27,10 +27,8 @@ pipeline{
          
            }
 		     
-     			 stage('TEST-LINUX'){
-		
-            
-                steps{
+           stage('TEST-LINUX'){
+		steps{
             
               sh ''' 
                  ls
@@ -38,16 +36,16 @@ pipeline{
                  }
          
                }
-		   }
+      }
 		   
 		     stage('PROD'){
             
-        steps{
+                           steps{
             
-             sh ''' 
-                 ls
-                 sleep 10 '''
-             }
+                         sh ''' 
+                     ls
+                     sleep 10 '''
+                  }
          
            }
        }
