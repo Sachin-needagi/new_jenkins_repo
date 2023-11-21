@@ -1,0 +1,62 @@
+pipeline{
+    agent any
+    
+    stages{
+      
+          stage('BUILD'){
+		  agent {label 'master'}
+            
+        steps{
+            
+             sh ''' 
+                 ls
+                 sleep 10 '''
+            }
+        }
+
+            parallel{		
+        
+        stage('TEST-WINDOW'){
+            
+        steps{
+            
+             sh ''' 
+                 ls
+                 sleep 10 '''
+             }
+         
+           }
+		     
+     			 stage('TEST-LINUX'){
+		
+            
+                steps{
+            
+              sh ''' 
+                 ls
+                 sleep 10 '''
+                 }
+         
+               }
+		   }
+		   
+		     stage('PROD'){
+            
+        steps{
+            
+             sh ''' 
+                 ls
+                 sleep 10 '''
+             }
+         
+           }
+       }
+    }
+      
+      
+      
+      
+      
+      
+      
+  
