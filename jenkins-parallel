@@ -11,7 +11,9 @@ pipeline{
                  sleep 10 '''
             }
         }
-Parallel {		
+
+stage('TEST_AT_A_TIME'){
+parallel {		
         
         stage ('TEST-WINDOW'){
             
@@ -29,9 +31,10 @@ Parallel {
                  sh ''' 
                    ls
                    sleep 10 '''
-                 }
+                   }
          
                }
+          }
       }
 		   
 		     stage('PROD'){
