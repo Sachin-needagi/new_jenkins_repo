@@ -1,11 +1,12 @@
 pipeline{
-    agent none
+    agent any
     
     stages{
       
           stage('BUILD'){
-         agent{label 'master'}
-		  steps{
+             
+         
+	steps{
             
              sh ''' 
                  ls
@@ -39,7 +40,7 @@ parallel {
       }
 		   
 		     stage('PROD'){
-                      agent{label 'master'}
+                      
                          steps{
                            sh ''' 
                             ls
