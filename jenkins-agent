@@ -1,0 +1,37 @@
+pipeline{
+    agent none
+    
+    stages{
+      
+          stage('BUILD'){
+		  agent{label 'master']
+            
+        steps{
+            
+             sh ''' 
+                 ls
+                 sleep 10 '''
+            }
+        }   
+        
+        stage('TEST'){
+		agenta[label 'slave1']
+            
+        steps{
+            
+             sh ''' 
+                 ls
+                 sleep 10 '''
+             }
+         
+           }
+       }
+    }
+      
+      
+      
+      
+      
+      
+      
+  
